@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/material toggle button/favicon_io/android-chrome-192x192.png" type="image/x-icon">
+  <title>Material Button</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      background-color: #262626;
+    }
+    #holder{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate:-50% -50%;
+      width: 10rem;
+      height: 5rem;
+      padding: 1rem;
+      border-radius: 5rem;
+    }
+    #switch{
+      position: relative;
+      box-shadow: 4px 4px 20px -10px rgba(0, 0, 0, 0.7);
+      background-color: white;    
+      width: 50%;
+      height: 100%;
+      border-radius: 50%;
+      margin-left: 0px;
+      transition: all 500ms cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
+    }
+    .off{
+      background-color: #E7E5E4;
+      /* box-shadow: inset 5px 15px 30px -18px rgba(0,0,0,0.7); */
+      transition: all 500ms .01s;
+    }
+    .on{
+      transition: all 500ms .3s;
+      background-color: #2563EB;
+    }
+  </style>
+</head>
+<body>
+  <div id="holder" class="off" onclick="clicked(this.children[0])">
+    <div id="switch" ></div>
+  </div>
+  
+</body>
+<script>
+  function clicked(e){
+  let a = e.getBoundingClientRect()
+  if(e.style.marginLeft == "" || e.style.marginLeft == "0px"){
+   
+    e.style.marginLeft = a.width + "px"
+    e.parentElement.classList.add("on") 
+  }else {
+     e.style.marginLeft = "0px"
+     e.parentElement.classList.remove("on")
+  }  
+}
+</script>
+</html>
