@@ -1,3 +1,3 @@
 # Material-Toggle-Button
 
-This is just a modern material themed toggle button
+Tts a normal toggle button but it's been designed keeping in mind the modern material UI theme
